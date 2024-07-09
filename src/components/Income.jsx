@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHome } from '@fortawesome/free-solid-svg-icons';
+import { BASE_URL } from '../../helper';
 
 const Income = () => {
   const navigate = useNavigate();
@@ -58,7 +59,7 @@ const Income = () => {
     };
 
     // Send data to DB
-    fetch(`${BASE_URL}/add-income`, {
+    fetch(`${BASE_URL}/api/v1/add-income`, {
       method: 'POST',
       headers: {
         'Content-type': 'application/json',

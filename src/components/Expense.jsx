@@ -54,7 +54,7 @@ const Expense = () => {
     };
 
     // Send data to DB
-    fetch(`${BASE_URL}/add-expense`, {
+    fetch(`${BASE_URL}/api/v1/add-expense`, {
       method: 'POST',
       headers: {
         'Content-type': 'application/json',

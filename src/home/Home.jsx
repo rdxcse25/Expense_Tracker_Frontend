@@ -10,7 +10,7 @@ const Home = () => {
         // Fetch income data from the API
         const fetchIncomeData = async () => {
             try {
-                const response = await fetch(`${BASE_URL}/get-incomes`);
+                const response = await fetch(`${BASE_URL}/api/v1/get-incomes`);
                 const data = await response.json();
                 setIncomeData(data);
                 // console.log(data);
@@ -22,7 +22,7 @@ const Home = () => {
         // Fetch expense data from the API
         const fetchExpenseData = async () => {
             try {
-                const response = await fetch(`${BASE_URL}/get-expenses`);
+                const response = await fetch(`${BASE_URL}/api/v1/get-expenses`);
                 const data = await response.json();
                 setExpenseData(data);
                 // console.log(data);

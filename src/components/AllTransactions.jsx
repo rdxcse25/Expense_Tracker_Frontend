@@ -12,7 +12,7 @@ const AllTransactions = () => {
   useEffect(() => {
     const fetchIncomeData = async () => {
       try {
-        const response = await fetch(`${BASE_URL}/get-incomes`);
+        const response = await fetch(`${BASE_URL}/api/v1/get-incomes`);
         const data = await response.json();
         setIncomeData(data);
       } catch (error) {
@@ -22,7 +22,7 @@ const AllTransactions = () => {
 
     const fetchExpenseData = async () => {
       try {
-        const response = await fetch(`${BASE_URL}/get-expenses`);
+        const response = await fetch(`${BASE_URL}/api/v1/get-expenses`);
         const data = await response.json();
         setExpenseData(data);
       } catch (error) {
@@ -39,8 +39,8 @@ const AllTransactions = () => {
     
 
     const url = type === 'income'
-      ? `${BASE_URL}/delete-income/${id}`
-      : `${BASE_URL}/delete-expense/${id}`;
+      ? `${BASE_URL}/api/v1/delete-income/${id}`
+      : `${BASE_URL}/api/v1/delete-expense/${id}`;
 
     fetch(url, {
       method: "DELETE",
